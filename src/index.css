@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-900: #0A0B0D;
+  --color-brand-800: #0F1115;
+  --color-gold-accent: #C5A059;
+  --color-surface: rgba(255, 255, 255, 0.03);
+  --color-surface-border: rgba(255, 255, 255, 0.08);
+  --font-serif: 'Cinzel', serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0A0B0D] text-slate-200 antialiased font-sans selection:bg-gold-accent selection:text-brand-900;
+    min-height: 100vh;
+  }
+}
+
+.serif { font-family: 'Cinzel', serif; }
+.sans { font-family: 'Inter', sans-serif; }
+.accent-gold { color: #C5A059; }
+.bg-gold { background-color: #C5A059; }
+
+.glass { 
+  background: rgba(255, 255, 255, 0.03); 
+  backdrop-filter: blur(10px); 
+  border: 1px solid rgba(255, 255, 255, 0.08); 
+}
+
+.card-gradient { 
+  background: linear-gradient(135deg, rgba(30,32,38,1) 0%, rgba(15,17,21,1) 100%); 
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03); 
+  backdrop-filter: blur(10px); 
+  border: 1px solid rgba(255, 255, 255, 0.08); 
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 1px rgba(197, 160, 89, 0.2); 
+}
+
+.text-gradient-gold {
+  background: linear-gradient(to right, #f3e5ab, #d4af37, #b8860b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100vw); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 35s linear infinite;
+  will-change: transform;
+}

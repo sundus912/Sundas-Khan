@@ -1,0 +1,10 @@
+{
+  "name": "Al Shafi Portal",
+  "description": "An AI agent providing spiritual assessments based on the Holy Qur'an, authentic Hadith, and recognized scholarly guidance.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
